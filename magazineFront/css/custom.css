@@ -115,13 +115,13 @@
 }
 
 .footer-text {
-  font-size: 3em;
+  font-size: 200%;
   color: #fff;
   margin-left: -80px;
 }
 
 .footer-small-text {
-  font-size: 2em;
+  font-size: 100%;
   color: #fff;
   margin-left: -75px;
   margin-top: 0;
@@ -136,6 +136,7 @@
   border: 1px solid #DB3434;
   padding: 20% 5% 5% 0;
   border-radius: 0 100% 0 0;
+
 }
 @media only screen and (max-width: 420px) {
 
