@@ -48,7 +48,7 @@
     					<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="numero de Identificación">
 					    <button type="button" class="btn btn-success" style="margin-top: 10px">Buscar</button>
 					</div>
-					
+
 
 					<div class="form-group">
 						<p>Suscribete aquí</p>
@@ -78,7 +78,7 @@
 </body>
 </html>
 
-<!-- 
+<!--
 	<div class="form-group">
 						<p>Validar que ya estás registrado</p>
 						<label for="exampleFormControlInput1">Identificación</label>
