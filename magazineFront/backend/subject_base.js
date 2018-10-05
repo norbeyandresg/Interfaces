@@ -35,14 +35,26 @@ function insertUser(){
 			$('#res').html(resp)
 		}
 	});
-
 }
 
 
 function suscribeUser(){
 	//capturar informacion el formulario de suscripcion
-	var identification = document.getElementById('identification').value;
-	//hacer la misma implementacion de post  basado en enlace GET del 'search'
+	var identification_subs = document.getElementById('identification_subs').value;
+	var magazine = document.getElementById('magazine').value;
+	
+	//creamos el objeto para el POST
+	var dataEn = {
+		'identification_subs': identification_subs,
+		'magazine': magazine
+	};
 
-
+	$.ajax({
+		type: 'POST',
+		url : 'backend_revista.php',
+		data : dataEn,
+		success : function(resp){
+			$('#res').html(resp)
+		}
+	});
 }

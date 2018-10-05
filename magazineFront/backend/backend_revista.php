@@ -1,13 +1,14 @@
 <?php
 	
 
-	require_once './conexion_bd.php';
+	require_once 'conexion_bd.php';
 
 	$observerClass = new Observer();
 	// capturar información del formulario de busqueda
 	if(isset($_GET['search'])){
 		$obj = $_GET['search'];
 		$observerClass->getUser($mysqli, $obj);
+
 	}
 
 	if (isset($_POST)) {
@@ -19,6 +20,8 @@
 		$obj = (object)$_POST;
 
 		$observerClass -> insertUser($mysqli,$obj);
+
+		//$observerClass -> suscribeUser($mysqli,$obj);
 	}
 
 	class Observer{
@@ -38,7 +41,7 @@
 					echo "No estas registrado, por favor registrate antes de realizar una suscripción";
 				}
 			}
-	
+			
 		}
 
 		function insertUser($mysqli, $obj){
@@ -51,7 +54,14 @@
 			$valores = $mysqli -> query($str);
 
 		}
-		function suscribeUser($mysqli, $obj){}
+
+		function suscribeUser($mysqli, $obj){
+
+			$insert_suscrb = "INSERT INTO suscriptores VALUES(".$obj->magazine.",
+				".$obj->identification_subs.")";
+
+			$valores = $mysqli -> query($insert_suscrb);	
+		}
 	}
 
 	
